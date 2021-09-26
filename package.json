@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/RbertKo/simple-naver-oauth-integration-server.git",
   "author": "RbertKo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
 }
