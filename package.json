@@ -1,0 +1,8 @@
+{
+  "name": "naver-oauth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RbertKo/simple-naver-oauth-integration-server.git",
+  "author": "RbertKo",
+  "license": "MIT"
+}
