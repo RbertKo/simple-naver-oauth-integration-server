@@ -33,11 +33,14 @@ passport.deserializeUser(function (obj, done) {
     done(null, obj)
 });
 
+const callbacks = [passport.authenticate('naver'), (req, res) => {
+    res.send('result :' + JSON.stringify({ state: req.query.state, user: req.user }))
+}];
+
 app.get('/oauth/naver', passport.authenticate('naver'));
 
-app.get('/callback/naver', passport.authenticate('naver'), (req, res) => {
-    res.send('result :' + JSON.stringify({ state: req.query.state, user: req.user }))
-})
+app.get('/callback/naver', callbacks)
+app.get('/dex/callback/naver', callbacks)
 
 app.listen(5000, () => {
     console.log('Succesfully.');
