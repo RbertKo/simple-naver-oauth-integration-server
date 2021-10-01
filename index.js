@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const { response } = require('express');
 
 const express = require('express');
 const app = express();
@@ -16,7 +17,9 @@ passport.use(
       callbackURL: process.env.CALLBACK_URL,
     },
     (accessToken, refreshToken, profile, done) => {
-      console.log(profile)
+      // console.log(profile)
+
+      
 
       done(null, profile)
     }
